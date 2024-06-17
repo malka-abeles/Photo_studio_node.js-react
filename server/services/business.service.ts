@@ -1,7 +1,7 @@
 import Business, {IBusiness} from '../models/business.models';
 
 
-export const createBuiness = async (businessData: IBusiness): Promise<IBusiness>  => {
+export const createBusiness = async (businessData: IBusiness): Promise<IBusiness>  => {
     const business = new Business({
         ...businessData,
     });

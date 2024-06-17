@@ -1,7 +1,7 @@
 import Service, {IService} from '../models/service.models';
 
 
-export const createBuiness = async (serviceData: IService): Promise<IService>  => {
+export const createService = async (serviceData: IService): Promise<IService>  => {
     const service = new Service({
         ...serviceData,
     });

@@ -1,7 +1,7 @@
 import Meeting, {IMeeting} from '../models/meeting.models';
 
 
-export const createBuiness = async (meetingData: IMeeting): Promise<IMeeting>  => {
+export const createMeeting = async (meetingData: IMeeting): Promise<IMeeting>  => {
     const meeting = new Meeting({
         ...meetingData,
     });
