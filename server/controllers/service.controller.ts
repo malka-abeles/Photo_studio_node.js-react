@@ -2,7 +2,7 @@ import { Request, Response } from 'express';
 import { IService } from "../models/service.models";
 import {createService, deleteService, getAllService, getServiceById, updateService } from "../services/service.service"
 
-export const createBuinessController = async (req: Request, res: Response) =>{
+export const createServiceController = async (req: Request, res: Response) =>{
     try{
         const service: IService = req.body;
         const newService = await createService(service);

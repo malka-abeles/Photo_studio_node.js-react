@@ -2,7 +2,7 @@ import { Request, Response } from 'express';
 import { IUser } from "../models/user.model";
 import {createUser, deleteUser, getAllUsers, getUserById, updateUser } from "../services/users.service"
 
-export const createBuinessController = async (req: Request, res: Response) =>{
+export const createUserController = async (req: Request, res: Response) =>{
     try{
         const user: IUser = req.body;
         const newUser = await createUser(user);
