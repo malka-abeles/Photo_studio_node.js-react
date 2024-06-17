@@ -9,8 +9,14 @@ enum Status  {
     InProgress = 'IN_PROGRESS',
 }
 
+export interface IMeeting{
+    id: String,
+    status: Status,
+    serviceId: String,
+    userId: String,
+}
+
 const MeetingSchema = new Schema({
-    _id:mongoose.Schema.Types.ObjectId,
     id: { type: String },
     status: {type: String, enum: Object.values(Status) },
     serviceId:{type: String},
@@ -18,4 +24,5 @@ const MeetingSchema = new Schema({
 });
 
 // Export model
-module.exports = mongoose.model("Meeting", MeetingSchema);
+const Meeting = mongoose.model<IMeeting>("Meeting", MeetingSchema);
+export default Meeting;
